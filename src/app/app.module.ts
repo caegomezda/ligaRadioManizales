@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IncioComponent } from './pages/incio/incio.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 import { HistoriaComponent } from './pages/historia/historia.component';
 import { EstatutosLigaComponent } from './pages/estatutos-liga/estatutos-liga.component';
 import { JuntaDirectivaComponent } from './pages/junta-directiva/junta-directiva.component';
@@ -21,15 +21,17 @@ import { TextComponent } from './componente/text/text.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './componente/menu/menu.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+//TOOLBAR
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+//MENU
+import {CdkMenuItemRadio,CdkMenuItemCheckbox,CdkMenuGroup,CdkMenu,CdkMenuTrigger,CdkMenuItem,CdkMenuBar,} from '@angular/cdk/menu';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IncioComponent,
+    InicioComponent,
     HistoriaComponent,
     EstatutosLigaComponent,
     JuntaDirectivaComponent,
@@ -51,10 +53,18 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppRoutingModule,
     NoopAnimationsModule,
     MatSlideToggleModule,
-    
+    //TOOLBAR
     MatToolbarModule, 
     MatButtonModule, 
-    MatIconModule
+    MatIconModule,
+    //MENU
+    CdkMenuBar,
+    CdkMenuItem,
+    CdkMenuTrigger,
+    CdkMenu,
+    CdkMenuGroup,
+    CdkMenuItemCheckbox,
+    CdkMenuItemRadio,
   ],
   providers: [],
   bootstrap: [AppComponent]
