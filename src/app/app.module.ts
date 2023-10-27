@@ -20,6 +20,11 @@ import { ContactoComponent } from './componente/contacto/contacto.component';
 import { TextComponent } from './componente/text/text.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './componente/menu/menu.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,12 @@ import { MenuComponent } from './componente/menu/menu.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatSlideToggleModule,
+    
+    MatToolbarModule, 
+    MatButtonModule, 
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
