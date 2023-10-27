@@ -13,6 +13,7 @@ import { BureauComponent } from './pages/bureau/bureau.component';
 import { BoletinesComponent } from './pages/boletines/boletines.component';
 import { ActaFundacionComponent } from './pages/acta-fundacion/acta-fundacion.component';
 import { FeriaManizalesComponent } from './pages/feria-manizales/feria-manizales.component';
+import { NuestrasRedesComponent } from './pages/nuestras-redes/nuestras-redes.component';
 import { HeaderComponent } from './componente/header/header.component';
 import { FooterComponent } from './componente/footer/footer.component';
 import { BannerComponent } from './componente/banner/banner.component';
@@ -27,6 +28,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 //MENU
 import {CdkMenuItemRadio,CdkMenuItemCheckbox,CdkMenuGroup,CdkMenu,CdkMenuTrigger,CdkMenuItem,CdkMenuBar,} from '@angular/cdk/menu';
+//GRID
+import {MatGridListModule} from '@angular/material/grid-list';
+import {NgFor} from '@angular/common';
+//CARD
+import {MatCardModule} from '@angular/material/card';
+import { CardComponent } from './componente/card/card.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +48,14 @@ import {CdkMenuItemRadio,CdkMenuItemCheckbox,CdkMenuGroup,CdkMenu,CdkMenuTrigger
     BoletinesComponent,
     ActaFundacionComponent,
     FeriaManizalesComponent,
+    NuestrasRedesComponent,
     HeaderComponent,
     FooterComponent,
     BannerComponent,
     ContactoComponent,
     TextComponent,
-    MenuComponent
+    MenuComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +74,11 @@ import {CdkMenuItemRadio,CdkMenuItemCheckbox,CdkMenuGroup,CdkMenu,CdkMenuTrigger
     CdkMenuGroup,
     CdkMenuItemCheckbox,
     CdkMenuItemRadio,
+    //GRID
+    MatGridListModule, 
+    NgFor,
+    //CARD
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
