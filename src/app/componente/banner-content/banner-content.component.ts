@@ -12,8 +12,6 @@ export interface Tile {
   styleUrls: ['./banner-content.component.scss']
 })
 export class BannerContentComponent {
-  isBanner0:Boolean = true;
-  isBanner1:Boolean = true;
   tiles0: Tile[] = [
     {class:"name1", text: 'One', cols: 4, rows: 1, color: 'lightpink'},
   ];
