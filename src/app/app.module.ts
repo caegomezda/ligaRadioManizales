@@ -34,6 +34,7 @@ import {NgFor} from '@angular/common';
 //CARD
 import {MatCardModule} from '@angular/material/card';
 import { CardComponent } from './componente/card/card.component';
+import { BannerContentComponent } from './componente/banner-content/banner-content.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { CardComponent } from './componente/card/card.component';
     TextComponent,
     MenuComponent,
     CardComponent,
+    BannerContentComponent,
   ],
   imports: [
     BrowserModule,

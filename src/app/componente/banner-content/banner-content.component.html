@@ -1,0 +1,20 @@
+<mat-grid-list *ngIf="isBanner0" cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles0"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list *ngIf="isBanner1" cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles1"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list>
+
