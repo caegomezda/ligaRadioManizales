@@ -6,18 +6,19 @@
     min-width: 34px;
     line-height: 26px;
     padding: 0 16px;
+    background-color: white;
   }
   
-  .example-menu-bar-item:hover {
-    background-color: rgb(208, 208, 208);
-  }
+  // .example-menu-bar-item:hover {
+  //   // background-color: rgb(208, 208, 208);
+  // }
   
   .example-menu {
     display: inline-flex;
     flex-direction: column;
     min-width: 180px;
     max-width: 280px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     padding: 6px 0;
   }
   
@@ -54,9 +55,9 @@
     justify-content: flex-end;
   }
   
-  .example-menu .example-menu-item:hover {
-    background-color: rgb(208, 208, 208);
-  }
+  // .example-menu .example-menu-item:hover {
+  //   background-color: rgb(208, 208, 208);
+  // }
   
   .example-menu .example-menu-item[role='menuitemradio'][aria-checked='true'] {
     background-color: rgb(225, 225, 225);
@@ -64,12 +65,25 @@
   .example-menu .example-menu-item[role='menuitemcheckbox'][aria-checked='true'] {
     background-color: rgb(225, 225, 225);
   }
-  .example-menu .example-menu-item:active {
-    background-color: rgb(170, 170, 170);
+  // .example-menu .example-menu-item:active {
+  //   background-color: rgb(170, 170, 170);
+  // }
+  
+  // .example-menu-bar-item[aria-expanded='true'],
+  // .example-menu-item[aria-expanded='true'] {
+  //   background-color: rgb(208, 208, 208) !important;
+  // }
+  .active {
+    position: relative;
+    color: #221959; /* Cambia el color del texto si es necesario */
   }
   
-  .example-menu-bar-item[aria-expanded='true'],
-  .example-menu-item[aria-expanded='true'] {
-    background-color: rgb(208, 208, 208) !important;
+  .active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Ajusta el grosor de la línea según tus necesidades */
+    background-color: #221959; /* Cambia el color de la línea según tus necesidades */
   }
-  

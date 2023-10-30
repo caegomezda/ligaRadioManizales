@@ -1,3 +1,17 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+.logo {
+    max-width: 180px; /* Define el ancho máximo del logotipo */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+mat-toolbar{
+  background: white;
+  height: auto; /* Mantiene la proporción original de la imagen */
+  span{
+    white-space: normal;
+    text-align: center;
+  }
+}
