@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input  } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 export interface Tile {
@@ -16,9 +16,9 @@ export interface Tile {
 export class BannerComponent {
   isBanner0:Boolean = true;
   isBanner1:Boolean = false;
-  isBanner2:Boolean = false;
+  isBanner2:Boolean = true;
   isBanner3:Boolean = false;
-
+  numeroAleatorioImg:Number=1;
   tiles: Tile[] = [
     {class:"name1", text: 'One', cols: 1, rows: 1, color: 'lightblue'},
     {class:"name2", text: 'Two', cols: 2, rows: 2, color: 'lightgreen'},
@@ -27,23 +27,18 @@ export class BannerComponent {
     {class:"name5", text: 'Five', cols: 5, rows: 3, color: 'lightyellow'},
   ];
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor() {}
 
   ngOnInit() {
-    this.breakpointObserver.observe([
-      Breakpoints.XSmall,
-      Breakpoints.Small,
-      Breakpoints.Medium
-    ]).subscribe(result => {
-      if (result.matches) {
-        this.tiles.forEach(tile => {
-          tile.cols = 2;
-        });
-      } else {
-        this.tiles.forEach(tile => {
-          tile.cols = 4;
-        });
-      }
-    });
+    console.log(this.numeroAleatorioImg);
+    this.numeroAleatorioImg = this.obtenerNumeroAleatorio();
   }
+  generarNumeroAleatorio(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  obtenerNumeroAleatorio(): number {
+    return this.generarNumeroAleatorio(1, 3);
+  }
+
 }
