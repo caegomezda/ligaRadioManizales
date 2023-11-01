@@ -8,6 +8,8 @@ export class LocalDataService {
   constructor() { }
 
   private valorBanner: boolean[] = [];
+  private valorCard: boolean[] = [];
+
 
   setValorBanner(valor: boolean[]): void {
     this.valorBanner = valor;
@@ -15,5 +17,13 @@ export class LocalDataService {
 
   getValorBanner(): boolean[] {
     return this.valorBanner;
+  }
+
+  setValorCard(valor: boolean[]): void {
+    this.valorCard = valor;
+  }
+
+  getValorCard(): boolean[] {
+    return this.valorCard;
   }
 }

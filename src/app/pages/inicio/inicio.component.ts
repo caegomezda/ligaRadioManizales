@@ -10,7 +10,7 @@ export class InicioComponent {
   constructor(private dataService: LocalDataService) { }
 
   ngOnInit(){
-    const valorBanner = [true, false, true, false]; // Ejemplo de un arreglo de booleanos
+    const valorBanner = [true, false, true, false, true, true]; // Ejemplo de un arreglo de booleanos
     this.dataService.setValorBanner(valorBanner);
   }
 }

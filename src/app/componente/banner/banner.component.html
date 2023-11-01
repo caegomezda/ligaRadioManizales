@@ -14,13 +14,48 @@
 
 <mat-grid-list *ngIf="isBanner2" cols="3" rowHeight="1:1">
   <mat-grid-tile>
-    <app-card></app-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <img class="mat-card-header-img" mat-card-image src="../../../assets/images/nube.png" alt="">
+      <mat-card-content>
+        <mat-card-title>COLABORACIÓN</mat-card-title>
+        <p>
+          Al colaborar con diferentes entidades de atención a desastres y emergencias, la Liga cumple con su labor de apoyo a la comunidad
+        </p>
+      </mat-card-content>
+    </mat-card>
   </mat-grid-tile>
+
   <mat-grid-tile>
-    <app-card></app-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <img class="mat-card-header-img" mat-card-image src="../../../assets/images/sombrero-de-graduado.png" alt="">
+      <mat-card-content>
+        <mat-card-title>CAPACITACIÓN</mat-card-title>
+        <p>
+          Ofrecemos información actualizada y relevante para los radioaficionados, y capacitaciones periódicas en tópicos de nuestra afición, incluyendo los exámenes de licenciamiento
+        </p>
+      </mat-card-content>
+    </mat-card>
   </mat-grid-tile>
+
   <mat-grid-tile>
-    <app-card></app-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <img class="mat-card-header-img" mat-card-image src="../../../assets/images/cheque.png" alt="">
+      <mat-card-content>
+        <mat-card-title>APOYO</mat-card-title>
+        <p>
+          Somos un eje de apoyo a todos los radioaficionados a nivel regional, nacional e internacional
+        </p>
+      </mat-card-content>
+    </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 
@@ -30,5 +65,60 @@
   <mat-grid-tile>3</mat-grid-tile>
   <mat-grid-tile>4</mat-grid-tile>
 </mat-grid-list>
+
+<div *ngIf="isBanner4" class="banner banner4">
+  <div class="container1">
+    <h1>
+      ¡Asóciate a nuestra Liga y disfruta de los servicios y ahoyo que ofrecemos!
+    </h1>
+  </div>
+  <div class="container2">
+    <p>
+      Contáctanos
+    </p>
+  </div>
+</div>
+
+<mat-grid-list *ngIf="isBanner5" cols="3" rowHeight="2:1">
+  <mat-grid-tile colspan="3">
+    <div class="banner banner5">
+      <div class="container11">
+        <h1>
+          Síguenos en nuestras redes sociales
+        </h1>
+      </div>
+      <div class="container21">
+        <p>
+          y mantente al día con las noticias y actividades que preparamos para todos
+        </p>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1">
+    <div class="social-icons">
+      <a href="#" target="_blank">
+        <img src="../../assets/images/facebook1.png" alt="Facebook">
+      </a>
+      <span>Liga Radio Manizales</span>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1">
+    <div class="social-icons">
+      <a href="#" target="_blank">
+        <img src="../../assets/images/youtube1.png" alt="YouTube">
+      </a>
+      <span>ligaradiomanizales</span>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1">
+    <div class="social-icons">
+      <a href="#" target="_blank">
+        <img src="../../assets/images/instagram1.png" alt="Instagram">
+      </a>
+      <span>@ligaradiomanizales</span>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
 
   
