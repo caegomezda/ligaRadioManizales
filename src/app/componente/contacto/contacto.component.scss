@@ -17,4 +17,22 @@
   td {
     padding-right: 8px;
   }
+.container {
+  padding: 10px 20px; // Ajusta el espaciado del botón
+  border: 1px solid #fff; // Borde sencillo
+  background: #221959;
+  cursor: pointer;
+  color: white !important;
+  p{
+    text-align: center;
+    margin-top: 12px;
+    font-size: 1.5rem; // Tamaño de fuente para el h1
+
+  }
+
+  &:hover {
+    background: #aa0421; // Cambia el fondo al pasar el cursor
+    color: white; // Cambia el color del texto al pasar el cursor
+  }
+}
   

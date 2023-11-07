@@ -1,1 +1,42 @@
-<p>text works!</p>
+<!-- 
+    TITULO
+    SUBTITULO
+    PARRAFO
+    PARRAFONEGRILLA
+    LISTA1
+    LISTA2
+    IMAGEN
+    TABLA1
+    TABLA2
+    MAPA
+ -->
+
+ <!-- En el template del componente -->
+<div *ngFor="let item of diccionario">
+    <ng-container [ngSwitch]="item.tipo">
+      <h1 *ngSwitchCase="'titulo'">{{ item.texto }}</h1>
+      <h2 *ngSwitchCase="'subtitulo'">{{ item.texto }}</h2>
+      <p *ngSwitchCase="'parrafo'">{{ item.texto }}</p>
+      <p *ngSwitchCase="'parrafoNegrilla'">{{ item.texto }}</p>
+      <ul *ngSwitchCase="'lista1'">
+        <li *ngFor="let elemento of item.texto.split(';')">{{ elemento }}</li>
+      </ul>
+      <ul *ngSwitchCase="'lista2'">
+        <li *ngFor="let elemento of item.texto.split(';')">{{ elemento }}</li>
+      </ul>
+      <img *ngSwitchCase="'imagen'" src="" alt="">
+      <table *ngSwitchCase="'tabla1'">
+        <!-- Renderiza la tabla 1 aquí -->
+      </table>
+      <table *ngSwitchCase="'tabla2'">
+        <!-- Renderiza la tabla 2 aquí -->
+      </table>
+      <div *ngSwitchCase="'mapa'">
+        <!-- Renderiza el contenedor de mapa aquí -->
+        <!-- Puedes usar una librería como Google Maps para mostrar el mapa -->
+        <!-- Ejemplo: <app-google-map [direccion]="item.mapa"></app-google-map> -->
+      </div>
+      <!-- Agregar más tipos según sea necesario -->
+    </ng-container>
+  </div>
+  
