@@ -1,4 +1,4 @@
-import { Component, Input  } from '@angular/core';
+import { Component } from '@angular/core';
 import { LocalDataService } from "../../services/local-data.service";
 
 export interface Tile {
@@ -36,7 +36,7 @@ export class BannerComponent {
 
   ngOnInit() {
     console.log(this.numeroAleatorioImg);
-    this.numeroAleatorioImg = this.obtenerNumeroAleatorio();
+    this.numeroAleatorioImg = this.dataService.obtenerNumeroAleatorio();
     this.bannerDistvalues()
   }
 
@@ -49,13 +49,4 @@ export class BannerComponent {
     this.isBanner4 = this.valorBanner[4]
     this.isBanner5 = this.valorBanner[5]
   }
-
-  generarNumeroAleatorio(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  obtenerNumeroAleatorio(): number {
-    return this.generarNumeroAleatorio(1, 3);
-  }
-
 }

@@ -35,6 +35,11 @@ import {NgFor} from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import { CardComponent } from './componente/card/card.component';
 import { BannerContentComponent } from './componente/banner-content/banner-content.component';
+//FORM
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -81,6 +86,12 @@ import { BannerContentComponent } from './componente/banner-content/banner-conte
     NgFor,
     //CARD
     MatCardModule,
+    //FORM
+    FormsModule, 
+    MatFormFieldModule, 
+    MatInputModule,
+    CommonModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+.banner-image {
+    object-fit: cover; /* Aplica un recorte al contenido de la imagen */
+    width: 100%; /* Ancho completo de la imagen dentro del contenedor */
+    height: 100%; /* Altura completa de la imagen dentro del contenedor */
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  

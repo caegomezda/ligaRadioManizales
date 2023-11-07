@@ -1,1 +1,32 @@
-<p>contacto works!</p>
+
+<mat-grid-list cols="2" >
+    <mat-grid-tile>
+        <img [src]="'../../../assets/images/img'+numeroAleatorioImg+'.jpg'" alt="Mi Imagen" class="banner-image">
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <form class="example-form" [formGroup]="contactForm" (ngSubmit)="enviarMensaje()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Nombre</mat-label>
+              <input matInput placeholder="Escribe tu nombre" formControlName="nombre">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Correo</mat-label>
+              <input matInput placeholder="Escribe tu correo" formControlName="correo">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+              <mat-label>Número de teléfono (opcional)</mat-label>
+              <input matInput placeholder="Escribe tu número de teléfono" formControlName="telefono">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+              <mat-label>Mensaje (opcional)</mat-label>
+              <textarea matInput placeholder="Escribe tu mensaje" formControlName="mensaje"></textarea>
+            </mat-form-field>
+            <p>
+              <a href="#">Enlace a las políticas de tratamiento de datos</a>
+            </p>
+            <button mat-button color="primary" type="submit">Enviar</button>
+          </form>
+    </mat-grid-tile>
+  </mat-grid-list>

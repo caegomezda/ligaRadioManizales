@@ -26,4 +26,12 @@ export class LocalDataService {
   getValorCard(): boolean[] {
     return this.valorCard;
   }
+
+  generarNumeroAleatorio(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  obtenerNumeroAleatorio(): number {
+    return this.generarNumeroAleatorio(1, 4);
+  }
 }
