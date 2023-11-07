@@ -7,7 +7,9 @@ export class ContactEmailService {
   private formularioContacto: any = {};
   constructor() { }
 
-  setValorFormContac(formulario: any): void {
+  async setValorFormContac(formulario: any): Promise<void> {
     this.formularioContacto = formulario;
+
   }
+  
 }
