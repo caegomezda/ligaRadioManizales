@@ -18,15 +18,25 @@
       <h2 *ngSwitchCase="'subtitulo'">{{ item.texto }}</h2>
       <p *ngSwitchCase="'parrafo'">{{ item.texto }}</p>
       <p *ngSwitchCase="'parrafoNegrilla'">{{ item.texto }}</p>
-      <ul *ngSwitchCase="'lista1'">
-        <li *ngFor="let elemento of item.texto.split(';')">{{ elemento }}</li>
-      </ul>
-      <ul *ngSwitchCase="'lista2'">
-        <li *ngFor="let elemento of item.texto.split(';')">{{ elemento }}</li>
-      </ul>
+      <mat-list *ngSwitchCase="'lista1'">
+        <mat-list-item *ngFor="let elemento of item.texto.split(';')">{{ elemento }}</mat-list-item>
+      </mat-list>
+      <mat-list *ngSwitchCase="'lista2'">
+        <mat-list-item *ngFor="let elemento of item.texto.split(';')">{{ elemento }}</mat-list-item>
+      </mat-list>
       <img *ngSwitchCase="'imagen'" src="" alt="">
       <table *ngSwitchCase="'tabla1'">
         <!-- Renderiza la tabla 1 aquí -->
+        <thead>
+          <tr>
+            <th *ngFor="let cabecera of item.cabeceras">{{ cabecera }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fila of item.datos">
+            <td *ngFor="let dato of fila">{{ dato }}</td>
+          </tr>
+        </tbody>
       </table>
       <table *ngSwitchCase="'tabla2'">
         <!-- Renderiza la tabla 2 aquí -->

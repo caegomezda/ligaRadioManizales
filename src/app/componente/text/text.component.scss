@@ -1,0 +1,78 @@
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+/* Estilo para el mat-list */
+mat-list {
+    // background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Estilo para el mat-list-item */
+  mat-list-item {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Estilo para mat-list-item en estado hover (opcional) */
+  mat-list-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+/* Estilo básico para todas las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  /* Estilo para las celdas de encabezado de la tabla */
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilo para las celdas de datos de la tabla */
+  td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilo para filas impares (opcional) */
+  tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  div {
+    /* Estilos para contenedores div */
+  }
+  
