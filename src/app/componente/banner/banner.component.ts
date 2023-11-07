@@ -35,7 +35,6 @@ export class BannerComponent {
   }
 
   ngOnInit() {
-    console.log(this.numeroAleatorioImg);
     this.numeroAleatorioImg = this.dataService.obtenerNumeroAleatorio();
     this.bannerDistvalues()
   }
