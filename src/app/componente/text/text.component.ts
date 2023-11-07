@@ -7,19 +7,15 @@ import { LocalDataService } from 'src/app/services/local-data.service';
   styleUrls: ['./text.component.scss']
 })
 export class TextComponent {
-diccionario:any = {};  
+diccionario:any = [];  
 constructor(private dataService: LocalDataService) { }
 
 ngOnInit(){
-  // const valorBanner = [true, false, true, false, true, true]; // Ejemplo de un arreglo de booleanos
-//  this.getdiccionarioData()
-  
+ this.getdiccionarioData()
 }
 
-ngAfterContentChecked(){
-  console.log("text");
-  
-  this.diccionario = this.dataService.getValorDiccionario();
-  console.log("this.diccionario",this.diccionario);
+async getdiccionarioData(){
+  this.diccionario = await this.dataService.getValorDiccionario();
 }
+
 }

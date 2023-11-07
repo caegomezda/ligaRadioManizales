@@ -1,25 +1,52 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class LocalDataService {
-  private textData:any = {}
-  private dataUrl = 'assets/data.json'; // Ruta al archivo JSON
-  constructor( private http: HttpClient,) { }
+  constructor() { }
 
   private valorBanner: boolean[] = [];
   private valorCard: boolean[] = [];
   private valorDiccionario:string = "";
 
+  private textData:any = {
+    "historia": [
+      {
+        "tipo": "titulo",
+        "texto": "HK6LRM 50 años"
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "Celebrando 50 años de la Liga de Radioaficionados de Manizales"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Datos de la tabla 1 prueba"
+      }
+    ],
+    "estatutosLiga": [
+      {
+        "tipo": "titulo",
+        "texto": "Estatutos Liga"
+      },
+      {
+        "tipo": "subtitulo",
+        "texto": "Celebrando 50 años de la Liga de Radioaficionados de Manizales"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Datos de la tabla 1 prueba"
+      }
+    ]
+}
+
+
   setValorDiccionario(diccionario:any): void {
     this.valorDiccionario = diccionario;
-    this.getTextData()
   }
 
   async getValorDiccionario() {
-    let result = this.textData[this.valorDiccionario]
+    let result = await this.textData[this.valorDiccionario];
     return result;
   }
 
@@ -45,19 +72,5 @@ export class LocalDataService {
 
   obtenerNumeroAleatorio(): number {
     return this.generarNumeroAleatorio(1, 4);
-  }
-
-  getData(): Observable<any> {
-    return this.http.get(this.dataUrl);
-  }
-
-  async getTextData(){
-    try {
-      this.textData = await this.getData().toPromise();
-      console.log("this.textData", this.textData);
-    } catch (error) {
-      // Maneja los errores, por ejemplo:
-      console.error('Error al cargar los datos:', error);
-    }
   }
 }

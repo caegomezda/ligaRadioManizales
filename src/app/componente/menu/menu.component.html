@@ -1,6 +1,6 @@
 <div cdkMenuBar>
     <button class="example-menu-bar-item" cdkMenuItem [routerLink]="['/inicio']" [cdkMenuTriggerFor]="inicio" routerLinkActive="active">Inicio</button>
-    <button class="example-menu-bar-item" cdkMenuItem [routerLink]="['/info-liga']" [cdkMenuTriggerFor]="infoLiga" [routerLinkActive]="['active']">Info Liga</button>
+    <button class="example-menu-bar-item" cdkMenuItem [cdkMenuTriggerFor]="infoLiga" [routerLinkActive]="['active']">Info Liga</button>
     <button class="example-menu-bar-item" cdkMenuItem [routerLink]="['/boletines']" [cdkMenuTriggerFor]="boletines" routerLinkActive="active">Boletines</button>
     <button class="example-menu-bar-item" cdkMenuItem [routerLink]="['/feria-manizales']" [cdkMenuTriggerFor]="feriasManizales" routerLinkActive="active">Feria de Manizales</button>
     <button class="example-menu-bar-item" cdkMenuItem [routerLink]="['/']" [cdkMenuTriggerFor]="contacto" routerLinkActive="active">Contacto</button>
