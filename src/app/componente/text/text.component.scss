@@ -58,9 +58,11 @@ mat-list-item:hover {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  color: #777;
 }
 
 .fancy-list-item {
+  font-size: 1.2em;
   flex-basis: calc(33.3333% - 10px);
   margin-bottom: 10px;
   padding: 15px;
@@ -72,6 +74,7 @@ mat-list-item:hover {
 
 .fancy-list-item:hover {
     background-color: #f5f5f5; /* Fondo para listas */
+    color: #777;
 }
 
 /* Estilos para imágenes */
@@ -98,12 +101,18 @@ th, td {
   text-align: left;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
 }
 
 th {
   background-color: #f5f5f5; /* Fondo para listas */
   font-weight: bold;
   color: #333;
+}
+
+th:hover,
+td:hover {
+  background-color: #e0e0e0; /* Color de resaltado al pasar el cursor */
 }
 
 /* Estilos más creativos para tablas */

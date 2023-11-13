@@ -315,6 +315,6 @@ export class LocalDataService {
   }
 
   obtenerNumeroAleatorio(): number {
-    return this.generarNumeroAleatorio(1, 4);
+    return this.generarNumeroAleatorio(1, 5);
   }
 }

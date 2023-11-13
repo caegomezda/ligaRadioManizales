@@ -10,8 +10,17 @@
 mat-toolbar{
   background: white;
   height: auto; /* Mantiene la proporción original de la imagen */
+  position: fixed; /* Fija la barra de herramientas en la parte superior */
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Asegura que la barra de herramientas esté sobre otros elementos */
+  transition: top 0.3s;
   span{
     white-space: normal;
     text-align: center;
   }
+}
+
+.mat-toolbar-scrolled {
+  top: -15px; /* Ajusta la posición de la barra de herramientas desplazada */
 }
