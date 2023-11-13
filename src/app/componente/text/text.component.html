@@ -12,6 +12,7 @@
  -->
 
  <!-- En el template del componente -->
+ <div style="height: 50px;"></div>
 <div *ngFor="let item of diccionario">
     <ng-container [ngSwitch]="item.tipo">
       <h1 *ngSwitchCase="'titulo'">{{ item.texto }}</h1>
