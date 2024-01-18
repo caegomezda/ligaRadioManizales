@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
 import { LocalDataService } from "../../services/local-data.service";
 
 export interface Tile {
@@ -14,6 +14,7 @@ export interface Tile {
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent {
+
   isBanner0:Boolean = false;
   isBanner1:Boolean = false;
   isBanner2:Boolean = false;
@@ -22,6 +23,7 @@ export class BannerComponent {
   isBanner5:Boolean = false;
   valorBanner:Boolean[] =[]
   numeroAleatorioImg:Number=1;
+
   
   tiles: Tile[] = [
     {class:"name1", text: 'One', cols: 3, rows:1, color: 'lightblue'},
@@ -37,6 +39,14 @@ export class BannerComponent {
   ngOnInit() {
     this.numeroAleatorioImg = this.dataService.obtenerNumeroAleatorio();
     this.bannerDistvalues()
+
+    let maxHeightCard1 = document.getElementById("cardContainer1")
+    let maxHeightCard2 = document.getElementById("cardContainer2")
+    let maxHeightCard3 = document.getElementById("cardContainer3")
+    console.log(maxHeightCard1?.getAttribute("height"));
+    console.log(maxHeightCard2?.getAttribute("height"));
+    console.log(maxHeightCard3?.getAttribute("height"));
+
   }
 
   async bannerDistvalues(){

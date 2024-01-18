@@ -12,12 +12,9 @@
   <mat-grid-tile>4</mat-grid-tile>
 </mat-grid-list>
 
-<mat-grid-list *ngIf="isBanner2" cols="3" rowHeight="1:1">
-  <mat-grid-tile>
+<mat-grid-list  class="mat-grid-list-custom"*ngIf="isBanner2" cols="3" rowHeight="1:1">
+  <mat-grid-tile id="cardContainer1">
     <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-      </mat-card-header>
       <img class="mat-card-header-img" mat-card-image src="../../../assets/images/nube.png" alt="">
       <mat-card-content>
         <mat-card-title>COLABORACIÓN</mat-card-title>
@@ -28,11 +25,8 @@
     </mat-card>
   </mat-grid-tile>
 
-  <mat-grid-tile>
+  <mat-grid-tile id="cardContainer2">
     <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-      </mat-card-header>
       <img class="mat-card-header-img" mat-card-image src="../../../assets/images/sombrero-de-graduado.png" alt="">
       <mat-card-content>
         <mat-card-title>CAPACITACIÓN</mat-card-title>
@@ -43,11 +37,8 @@
     </mat-card>
   </mat-grid-tile>
 
-  <mat-grid-tile>
+  <mat-grid-tile id="cardContainer3">
     <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-      </mat-card-header>
       <img class="mat-card-header-img" mat-card-image src="../../../assets/images/cheque.png" alt="">
       <mat-card-content>
         <mat-card-title>APOYO</mat-card-title>
@@ -58,6 +49,7 @@
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
+
 
 <mat-grid-list *ngIf="isBanner3" cols="2" rowHeight="2:1">
   <mat-grid-tile>1</mat-grid-tile>

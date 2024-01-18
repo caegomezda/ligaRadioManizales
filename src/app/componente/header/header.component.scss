@@ -15,12 +15,13 @@ mat-toolbar{
   top: 0;
   z-index: 1000; /* Asegura que la barra de herramientas esté sobre otros elementos */
   transition: top 0.3s;
+  justify-content: space-evenly;
   span{
     white-space: normal;
     text-align: center;
   }
 }
 
-.mat-toolbar-scrolled {
-  top: -15px; /* Ajusta la posición de la barra de herramientas desplazada */
-}
+// .mat-toolbar-scrolled {
+//   top: -15px; /* Ajusta la posición de la barra de herramientas desplazada */
+// }
